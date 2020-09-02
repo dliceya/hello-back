@@ -15,7 +15,7 @@ import org.joda.time.LocalDateTime;
 @Data
 @ToString
 @EqualsAndHashCode
-public class userDTO {
+public class UserDTO {
     private Integer id;
 
     private String username;
