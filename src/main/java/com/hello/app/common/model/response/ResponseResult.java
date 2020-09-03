@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.slf4j.MDC;
 
-import static com.hello.app.constant.CommonConstant.TRACE_ID;
+import static com.hello.app.common.constant.CommonConstant.TRACE_ID;
 
 /**
  * @Author: dlice.

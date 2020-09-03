@@ -1,6 +1,6 @@
 package com.hello.app.model.vo;
 
-import com.hello.app.model.entity.User;
+import com.hello.app.model.entity.HelloUser;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import java.util.List;
  * @Author: dlice
  */
 public class UserList {
-    private List<User> userList;
+    private List<HelloUser> userList;
 }

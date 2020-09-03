@@ -1,4 +1,4 @@
-package com.hello.app.constant;
+package com.hello.app.common.constant;
 
 /**
  * @author 纸菌

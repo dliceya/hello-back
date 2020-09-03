@@ -9,6 +9,7 @@ import com.google.common.collect.ImmutableMap;
 import com.hello.app.common.model.response.CommonCode;
 import com.hello.app.common.model.response.ResponseResult;
 import com.hello.app.common.model.response.ResultCode;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * 控制器增强
  */
+@Slf4j
 @ControllerAdvice
 public class ExceptionCatch {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionCatch.class);
@@ -41,7 +43,7 @@ public class ExceptionCatch {
     @ExceptionHandler(CustomException.class)
     @ResponseBody
     public ResponseResult customException(CustomException e) {
-        LOGGER.error("catch exception : {}\r\nexception: ", e.getMessage(), e);
+        log.error("catch exception : {}\r\nexception: ", e.getMessage(), e);
         ResultCode resultCode = e.getResultCode();
         return new ResponseResult(resultCode);
     }
@@ -50,7 +52,7 @@ public class ExceptionCatch {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseResult exception(Exception exception) {
-        LOGGER.error("catch exception:{}", exception.getMessage());
+        log.error("catch exception:{}", exception.getMessage());
         if (EXCEPTIONS == null) {
             EXCEPTIONS = builder.build();
         }

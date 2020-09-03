@@ -1,4 +1,4 @@
-package com.hello.app.event;
+package com.hello.app.common.event;
 
 import org.springframework.context.ApplicationEvent;
 

@@ -1,6 +1,6 @@
-package com.hello.app.filter;
+package com.hello.app.common.filter;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Random;
 import java.util.UUID;
 
-import static com.hello.app.constant.CommonConstant.TRACE_ID;
+import static com.hello.app.common.constant.CommonConstant.TRACE_ID;
 
 /**
  * @author 纸菌
  * 2020-09-03 14:33
  */
-@Log4j2
+@Slf4j
 public class TraceIdInterceptor implements HandlerInterceptor {
 
     @Override
@@ -40,7 +40,7 @@ public class TraceIdInterceptor implements HandlerInterceptor {
 
     /**
      * 生成链路跟踪ID
-     * @return
+     * @return 链路跟踪ID
      */
     private String generateTraceId() {
 

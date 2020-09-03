@@ -7,6 +7,8 @@ import java.util.Optional;
 /**
  * Abstract cache store.
  *
+ * @param <K> cache key type
+ * @param <V> cache value type
  * @Date: 2020/9/2 23:01
  * @Author: dlice
  */
