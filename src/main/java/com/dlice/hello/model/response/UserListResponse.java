@@ -1,4 +1,4 @@
-package com.dlice.hello.model.user.response;
+package com.dlice.hello.model.response;
 
 import com.dlice.hello.common.model.response.ResponseResult;
 

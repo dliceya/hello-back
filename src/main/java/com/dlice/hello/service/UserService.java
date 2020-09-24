@@ -1,30 +1,19 @@
 package com.dlice.hello.service;
 
-import com.dlice.hello.repository.UserRepository;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+import com.dlice.hello.model.entity.HelloUser;
 import org.springframework.stereotype.Service;
+
+import java.awt.print.Pageable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Date: 2020/9/21 22:30
  * @Author: dlice
  */
 @Service
-public class UserService {
+public interface UserService extends IService<HelloUser> {
 
-    private final UserRepository userRepository;
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-//    public QueryResponseResult getUserList(UserQueryRequest userRequest, Pageable pageable){
-//
-//        QueryResult queryResult = new QueryResult();
-//
-//        queryResult.setList();
-//
-//        Iterable<HelloUser> all = userRepository.findAll();
-//        all.
-//
-//        QueryResponseResult result = new QueryResponseResult(CommonCode.SUCCESS, );
-//
-//    }
 }

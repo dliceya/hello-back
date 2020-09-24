@@ -1,16 +1,17 @@
-package com.dlice.hello.model.user.request;
+package com.dlice.hello.model.request;
 
+import com.dlice.hello.common.model.request.PageQueryParam;
 import com.dlice.hello.common.model.request.Request;
 import lombok.Data;
-
-import javax.persistence.Column;
+import lombok.EqualsAndHashCode;
 
 /**
  * @Date: 2020/9/21 22:12
  * @Author: dlice
  */
 @Data
-public class UserQueryRequest extends Request {
+@EqualsAndHashCode(callSuper = true)
+public class UserQueryRequest extends PageQueryParam {
 
     // 用户名
     private String username;
@@ -22,6 +23,5 @@ public class UserQueryRequest extends Request {
     private String email;
 
     // 用户手机号
-    @Column(name = "phone", length = 15)
     private String phone;
 }
