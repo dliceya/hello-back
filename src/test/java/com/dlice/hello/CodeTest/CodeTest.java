@@ -1,15 +1,15 @@
 package com.dlice.hello.CodeTest;
 
+import com.dlice.hello.aop.AOP;
 import com.dlice.hello.model.entity.HelloUser;
 import com.dlice.hello.service.impl.UserServiceImpl;
-import java.time.LocalDateTime;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
@@ -50,5 +50,17 @@ public class CodeTest {
         String mobilPhone = "17795793350";
         System.out.println(mobilPhone.replaceAll("(\\d{3})(\\d{4})(\\d{4})","$1****$2"));
 
+    }
+
+    @Test
+    public void testAOP(){
+        String test = this.test("123");
+        System.out.println(test);
+
+    }
+
+    @AOP
+    public String test(String args){
+        return "11111";
     }
 }
