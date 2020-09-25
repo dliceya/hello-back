@@ -28,8 +28,6 @@ public class TraceIdInterceptor implements HandlerInterceptor {
         // put traceId
         MDC.put(TRACE_ID, traceId);
 
-        log.info("{} -> {}", traceId, request.getRequestURI());
-
         return true;
     }
 
@@ -48,7 +46,7 @@ public class TraceIdInterceptor implements HandlerInterceptor {
 
         String uid = UUID.randomUUID().toString().replace("-", "");
 
-        int start = new Random().nextInt(26);
+        int start = new Random().nextInt(24);
 
         return uid.substring(start, start + 8);
     }

@@ -2,7 +2,7 @@ server:
   port: 10001
 spring:
   devtools:
-    add-properties: false
+    add-properties: true
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8

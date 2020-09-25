@@ -1,6 +1,6 @@
 package com.dlice.hello.CodeTest;
 
-import com.dlice.hello.aop.AOP;
+import com.dlice.hello.aop.annotation.AOP;
 import com.dlice.hello.model.entity.HelloUser;
 import com.dlice.hello.service.impl.UserServiceImpl;
 import org.junit.Test;

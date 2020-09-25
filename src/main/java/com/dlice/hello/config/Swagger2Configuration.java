@@ -32,7 +32,7 @@ public class Swagger2Configuration {
 
     private Tag[] getTags() {
         Tag[] tags = {
-                new Tag("uCenter", "用户中心"),
+                new Tag("uCenter_app", "用户中心"),
         };
         return tags;
     }

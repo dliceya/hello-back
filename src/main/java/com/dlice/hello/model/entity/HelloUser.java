@@ -1,15 +1,16 @@
 package com.dlice.hello.model.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.dlice.hello.model.entity.base.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
-
-import static com.baomidou.mybatisplus.annotation.IdType.*;
+import static com.baomidou.mybatisplus.annotation.IdType.AUTO;
 
 @Data
 @ToString(callSuper = true)
